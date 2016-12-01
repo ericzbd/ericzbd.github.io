@@ -1,0 +1,145 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Tech Feedr</title>
+      <link rel="stylesheet" href="styles/normalize.css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="styles/html5bp.css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="styles/style.css" media="screen" charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+          <section class="container">
+            <a href="#"><h1>Feedr</h1></a>
+            <nav>
+              <ul>
+                <li><a href="#"><span>choose source</span></a>
+                  <ul>
+                      <li><a href="#" id="source1" class="sources">Tech Crunch</a></li>
+                      <li><a href="#" id="source2" class="sources">Tech Radar</a></li>
+                      <li><a href="#" id="source3" class="sources">The Next Web</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <section id="search">
+                <input type="text" name="name" value="" class="hidden">
+                  <a href="#"><img src="images/search.png" alt="" /></a>
+              </section>
+            </nav>
+
+            <div class="clearfix"></div>
+          </section>
+        </header>
+        <!-- POP UP-->
+        <div id="my_popup"><!--class="loader hidden"-->
+          <a href="#" class="my_popup_close">X</a>
+          <div class="container">
+
+            <h1>Article title here</h1>
+            <p>
+              Article description/content here.
+            </p>
+            <a href="#" class="popUpAction" target="_blank">Read more from source</a>
+          </div>
+        </div>
+        <!--END POP UP-------->
+
+        <section id="main" class="container"> <!--CHANGE BG COLOR-->
+            <!--LOGO-->
+            <div align=center; >
+                <img id="logo" src="" style="padding-top: 7em; max-height:8em; max-width: 20em; display:inline-block;margin:auto;" >
+            </div>
+            <!---------------------------->
+            <div class="my_popup_open">
+          <article class="article" id="art1">
+            <section class="featuredImage" >
+              <img id="pic1" src="images/article_placeholder_1.jpg" alt="" />
+            </section>
+            <section class="articleContent" id="headline1">
+                <a href="#"><h3>Test article title </h3></a>
+                <h6>Lifestyle</h6>
+            </section>
+            <section class="impressions" id="imp1">
+              0
+            </section>
+            <div class="clearfix"></div>
+          </article>
+            </div>
+
+           <div class="my_popup_open">
+
+            <article class="article" id="art2">
+            <section class="featuredImage">
+              <img id="pic2"src="images/article_placeholder_2.jpg" alt="" />
+            </section>
+            <section class="articleContent" id="headline2">
+                <a href="#"><h3>Test article title</h3></a>
+                <h6>Lifestyle</h6>
+            </section>
+            <section class="impressions" id="imp2">
+              0
+            </section>
+            <div class="clearfix"></div>
+          </article>
+            </div>
+
+            <div class="my_popup_open">
+          <article class="article" id="art3">
+            <section class="featuredImage" >
+              <img id="pic3" src="images/article_placeholder_2.jpg" alt="" />
+            </section>
+            <section class="articleContent" id="headline3">
+                <a href="#"><h3>Test article title</h3></a>
+                <h6>Lifestyle</h6>
+            </section>
+            <section class="impressions" id="imp3">
+              0
+            </section>
+            <div class="clearfix"></div>
+          </article>
+            </div>
+
+            <div class="my_popup_open">
+            <article class="article" id="art4">
+                <section class="featuredImage" >
+                    <img id="pic4" src="images/article_placeholder_1.jpg" alt="" />
+                </section>
+                <section class="articleContent" id="headline4">
+                    <a href="#"><h3>Test article title</h3></a>
+                    <h6>Lifestyle</h6>
+                </section>
+                <section class="impressions" id="imp4">
+                    0
+                </section>
+                <div class="clearfix"></div>
+            </article>
+            </div>
+        </section>
+
+        <script src="js/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/app.js"></script>
+        <!-- Include jQuery Popup Overlay -->
+        <script src="jquery-popup-overlay-gh-pages/jquery.popupoverlay.js"></script>
+
+        <script>
+            $(document).ready(function() {
+
+                // Initialize the plugin
+                $('#my_popup').popup();
+
+            });
+        </script>
+
+    </body>
+</html>
