@@ -1,6 +1,6 @@
 getNewsSource();
 var url = "https://newsapi.org/v1/articles?source=";
-var apiKey = "378ebc5c29b44c15a26ba8be1c59f1bf";
+var apiKey = "PASTE_YOUR_API_KEY_HERE";
 var source;
 var logoUrl;
 
