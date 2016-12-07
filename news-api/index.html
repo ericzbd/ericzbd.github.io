@@ -31,10 +31,11 @@
                   </ul>
                 </li>
               </ul>
-              <section id="search">
-                <input type="text" name="name" value="" class="hidden">
-                  <a href="#"><img src="images/search.png" alt="" /></a>
-              </section>
+
+                <section id="search">
+                    <input type="text" name="name" value="">
+                    <a href="#"><img id="magGlass" src="images/search.png" alt="" /></a>
+                </section>
             </nav>
 
             <div class="clearfix"></div>
@@ -54,7 +55,7 @@
         </div>
         <!--END POP UP-------->
 
-        <section id="main" class="container"> <!--CHANGE BG COLOR-->
+        <section id="main" class="container">
             <!--LOGO-->
             <div align=center; >
                 <img id="logo" src="" style="padding-top: 7em; max-height:8em; max-width: 20em; display:inline-block;margin:auto;" >
@@ -67,7 +68,7 @@
             </section>
             <section class="articleContent" id="headline1">
                 <a href="#"><h3>Test article title </h3></a>
-                <h6>Lifestyle</h6>
+                <h6 id="readmore1">Click to read more from source</h6>
             </section>
             <section class="impressions" id="imp1">
               0
@@ -84,7 +85,7 @@
             </section>
             <section class="articleContent" id="headline2">
                 <a href="#"><h3>Test article title</h3></a>
-                <h6>Lifestyle</h6>
+                <h6><a id="readmore2" href="">Click to read more from source</a></h6>
             </section>
             <section class="impressions" id="imp2">
               0
@@ -100,7 +101,7 @@
             </section>
             <section class="articleContent" id="headline3">
                 <a href="#"><h3>Test article title</h3></a>
-                <h6>Lifestyle</h6>
+                <h6><a id="readmore3" href="">Click to read more from source</a></h6>
             </section>
             <section class="impressions" id="imp3">
               0
@@ -116,7 +117,7 @@
                 </section>
                 <section class="articleContent" id="headline4">
                     <a href="#"><h3>Test article title</h3></a>
-                    <h6>Lifestyle</h6>
+                    <a id="readmore4" href=""><h6>>Click to read more from source</h6></a>
                 </section>
                 <section class="impressions" id="imp4">
                     0
@@ -136,7 +137,10 @@
             $(document).ready(function() {
 
                 // Initialize the plugin
-                $('#my_popup').popup();
+                $('#my_popup').popup({
+                    opacity: 1,
+                    color: '#0066ff'
+                });
 
             });
         </script>
