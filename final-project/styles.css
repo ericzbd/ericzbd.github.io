@@ -1,0 +1,259 @@
+body {
+	background: url(Sand_Mandala.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+
+}
+.textarea {
+	margin: auto;
+	width: 80%;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	padding: 2em;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	-webkit-border-radius: 25px;
+	background-color: #FFA500;
+	-moz-border-radius: 15px;border-radius: 15px;border:7px solid #270FFF; -webkit-box-shadow: #B3154F 3px 3px 3px;-moz-box-shadow: #B3154F 3px 3px 3px; box-shadow: #B3154F 3px 3px 3px;
+
+	font-family: times, Times New Roman, times-roman, georgia, serif;
+	font-size: 20px;
+	line-height: 40px;
+	letter-spacing: -1px;
+	color: #444;
+}
+/*
+.button {
+	font-weight:normal;
+	font-size: 20px;
+	background-color: #2EA6FF;
+	color: #fff;
+	border-radius: 25px;
+	padding: 30px;
+}
+*/
+#center{
+	margin:0px auto;
+
+}
+.fa {
+	cursor: pointer;
+	padding-left: 3px;
+}
+
+#header {
+        color: #006600; height: 70px; padding-bottom:0.4em; margin: 0; text-shadow: 1px 1px #000033; 
+}
+.banner img{
+	-webkit-border-radius: 15px; -moz-border-radius: 15px;border-radius: 15px;border:7px solid #270FFF;background-color:#4FE339;-webkit-box-shadow: #B3154F 3px 3px 3px;-moz-box-shadow: #B3154F 3px 3px 3px; box-shadow: #B3154F 3px 3px 3px;
+
+}
+.single-item-dj img {
+	 -webkit-border-radius: 15px;-moz-border-radius: 15px;border-radius: 15px;border:7px solid #270FFF;background-color:#4FE339;-webkit-box-shadow: #B3154F 3px 3px 3px;-moz-box-shadow: #B3154F 3px 3px 3px; box-shadow: #B3154F 3px 3px 3px;
+
+ }
+.single-item-gallery img {
+	-webkit-border-radius: 15px;-moz-border-radius: 15px;border-radius: 15px;border:7px solid #270FFF;background-color:#4FE339;-webkit-box-shadow: #B3154F 3px 3px 3px;-moz-box-shadow: #B3154F 3px 3px 3px; box-shadow: #B3154F 3px 3px 3px;
+
+}
+.single-item-flyers img {
+	-webkit-border-radius: 15px;-moz-border-radius: 15px;border-radius: 15px;border:7px solid #270FFF;background-color:#4FE339;-webkit-box-shadow: #B3154F 3px 3px 3px;-moz-box-shadow: #B3154F 3px 3px 3px; box-shadow: #B3154F 3px 3px 3px;
+
+}
+h1 {
+
+	padding-left: 2em; text-indent: 0;
+
+}
+
+#left {
+
+	float: none; 
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	
+	
+	}
+	
+#floatblock {
+
+	float: left; display: block; text-align: right; width: 120px; padding-right: 5px;
+
+}
+
+#textarea {
+	
+	display: block; margin-bottom: 20px; 
+	
+}
+
+#mySubmit {
+
+	margin-left: 130px;
+}
+
+#left a {
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	color: #ffffcc;
+	font-weight: bold;
+	border: 3px outset #cccccc;
+	padding: 0.3em;
+	width: 92%;
+	
+	
+	
+
+	}
+	
+#left a:link {
+
+	background-color: #008000;
+
+	}
+	
+#left a:visited {
+
+	background-color: #48751a;
+	
+	}
+	
+#left a:hover { border: 3px inset #FF0000; 
+
+	}
+	
+table {
+
+	background-color: #ffffff; width: 80%; border-width: 3px; border-style: solid;
+	
+	margin-bottom: 10px; border-color: #FF0000;
+	
+	}
+	
+th {
+
+float: left; color: #006600;
+
+	}
+	
+td {
+	vertical-align: top; padding: 10px; 
+	
+	}
+	
+
+
+	
+#left ul { list-style-type: none;
+margin: 0;
+padding-left: 0; padding: 0; 
+
+		}
+		
+#right {	margin-left: 180px; padding: 0.5em; margin: 0; font-size: 90%;
+padding-right: 20px; float: right;
+padding-bottom: 20px;	
+	}
+
+	
+ 
+h2 { color: #FF0000; margin: 0;
+}
+
+h3 {
+        color: #FF0000; padding-top: 0px; margin-top: 0; margin: 0; padding: 0;
+}
+
+img {
+
+	border: 0px; max-height: 400px; max-width: 600px;
+
+}
+
+/*
+.logo {
+}
+*/
+.nav img{
+		 height: 80%; text-align: center; border-radius: 15px;
+}
+
+#mobile { display: inline; }
+
+#desktop { display: none;}
+
+/*#wrapper {
+
+		margin: 0; padding: 0; min-width: 0;
+
+		width: 100%; margin-right: 0; margin-left: 0; background-color: #ffffcc;  padding-top: 0; 
+		
+		padding-right: 0;
+		
+		padding-left: 30px; border-style: ridge; border-width: 1px;      border-radius: 25px; 
+		
+		-webkit-box-shadow: inset -3px -3px 3px 3px #00332B;
+		
+		-moz-box-shadow: inset -3px -3px 3px 3px #00332B; box-shadow: inset -3px -3px 3px 3px #00332B; display: table;
+
+}
+*/
+.clear {
+
+	clear: left;
+
+	}
+
+.floatleft {
+	float: none;
+	padding-right: 0px;
+	padding-bottom: 0px;
+
+	}
+	
+#right p, #right ul, #right dd, #right dt { margin: 0.3em; 
+
+	
+
+}
+
+
+
+#footer {
+		background-color: #94BFFF; color: #7D0032; margin-right: auto; margin-left: auto; 
+		font-family: "Verdana"; font-style: oblique; clear: both; padding-bottom: 0;
+		padding-top: 0; 
+		
+	
+		
+		
+
+   bottom:0;
+   width:80%;
+   height:60px;
+   background:#ee7600;
+   position: fixed;
+   border-radius: 70px;
+   padding-left: 80px;
+   padding-top:5px;
+   padding-bottom:5px;
+
+
+   
+}
+
+.contact {
+
+	font-weight: bold; font-size: .90em; font-family: "Times New Roman";
+
+}
+
+dd {
+		font-style: italic; font-size: .9em; font-weight:bold; line-height: 100%; 
+}
+

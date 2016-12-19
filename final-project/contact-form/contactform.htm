@@ -1,0 +1,180 @@
+<!--
+URL: www.freecontactform.com
+Version: FreeContactForm Free V2.2
+Copyright (c) 2013 Stuart Cochrane
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Contact Us</title>
+	<script src="freecontactformvalidation.js"></script>
+	<script>
+	required.add('Full_Name','NOT_EMPTY','Full Name');
+	required.add('Email_Address','EMAIL','Email Address');
+	required.add('Your_Message','NOT_EMPTY','Your Message');
+	required.add('AntiSpam','NOT_EMPTY','Anti-Spam Question');
+	</script>
+
+		<link rel="stylesheet" type="text/css" href="../styles.css">
+		<link rel="stylesheet" type="text/css" href="freecontactform.css">
+
+	</head>
+	<body>
+	<div align=center>
+		<div  style="text-align:center;" class="banner">
+			<a href="../index.html"><img id="banner" src="../banner2.jpg" ></a><br>
+		</div>
+		<div class="nav" align=center >
+
+
+			<a  href="../about.html"><img id="button1" src="../buttons/about.jpg"></a>
+			<a  href="../music.html"><img id="button2" src="../buttons/music.jpg"></a>
+			<a  href="../mixes.html"><img id="button3" src="../buttons/mixes.jpg"></a>
+			<a  href="../flyers.html"><img id="button4" src="../buttons/flyers.jpg" ></a>
+			<a  href="../radio.html"><img id="button5" src="../buttons/radio.jpg"></a>
+			<a  href="../contact-form/contactform.htm"><img id="button6" src="../buttons/contact.jpg"></a>
+
+		</div>
+	
+	<form name="freecontactform" method="post" action="freecontactformprocess.php" onsubmit="return validate.check(this)">
+	<table width="400px" class="freecontactform" class="textarea">
+	<tr>
+	 <td colspan="2">
+	  
+	 <div class="freecontactformheader">Contact Us Form</div>
+	  
+	 <div class="freecontactformmessage">Fields marked with <span class="required_star"> * </span> are mandatory.</div>
+	  
+	 </td>
+	</tr>
+	<tr>
+	 <td valign="top">
+	  <label for="Full_Name" class="required">Full Name<span class="required_star"> * </span></label>
+	 </td>
+	 <td valign="top">
+	  <input type="text" name="Full_Name" id="Full_Name" maxlength="80" style="width:230px">
+	 </td>
+	</tr>
+	<tr>
+	 <td valign="top">
+	  <label for="Email_Address" class="required">Email Address<span class="required_star"> * </span></label>
+	 </td>
+	 <td valign="top">
+	  <input type="text" name="Email_Address" id="Email_Address" maxlength="100" style="width:230px">
+	 </td>
+	</tr>
+	<tr>
+	 <td valign="top">
+	  <label for="Telephone_Number" class="not-required">Telephone Number</label>
+	 </td>
+	 <td valign="top">
+	  <input type="text" name="Telephone_Number" id="Telephone_Number" maxlength="100" style="width:230px">
+	 </td>
+	</tr>
+	<tr>
+	 <td valign="top">
+	  <label for="Your_Message" class="required">Your Message<span class="required_star"> * </span></label>
+	 </td>
+	 <td valign="top">
+	  <textarea style="width:230px;height:160px" name="Your_Message" id="Your_Message" maxlength="2000"></textarea>
+	 </td>
+	</tr>
+	<tr>
+	 <td colspan="2" style="text-align:center" >
+	  <div class="antispammessage">
+	  To help prevent automated spam, please answer this question
+	  <br /><br />
+		  <div class="antispamquestion">
+		   <span class="required_star"> * </span>
+		   Using only numbers, what is 10 plus 15? &nbsp; 
+		   <input type="text" name="AntiSpam" id="AntiSpam" maxlength="100" style="width:30px">
+		  </div>
+	  </div>
+	 </td>
+	</tr>
+	<tr>
+	 <td colspan="2" style="text-align:center" >
+	 <br /><br />
+	  <input type="submit" value=" Submit Form " style="width:200px;height:40px">
+	  <br /><br />
+	  <!-- 
+	  If you want to remove this author link, 
+	  please purchase an unbranded version from: http://www.freecontactform.com/unbranded_form.php 
+	  Or upgrade to the professional version at: http://www.freecontactform.com/professional.php
+	  -->
+	  <div>Form provided by: <a href="http://www.freecontactform.com">FreeContactForm.com</a></div>
+	  <br /><br />
+	 </td>
+	</tr>
+	</table>
+	</form>
+	</div>
+	<script type="text/javascript" src="../hover-transitions/scripts/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../slick/slick.min.js"></script>
+	<script type="text/javascript" src="../hover-transitions/scripts/jquery.hover-transitions-1.0.js"></script>
+	<script type="text/javascript" src="../hover-transitions/scripts/jquery-ui-1.8.22.custom.min.js"></script>
+	<script>
+        $(document).ready(function(){
+
+            $('#banner').hover_transitions({
+                image_src_two: "../banner3.jpg",
+                pattern: "crossing",
+                show_method: "fly",
+                fly_distance: 200
+            });
+
+            $('#button1').hover_transitions({
+                image_src_two: "../buttons/about2.jpg",
+                pattern: "crossing",
+                show_method: "fly",
+                fly_distance: 200
+            });
+
+            $('#button2').hover_transitions({
+                image_src_two: "../buttons/music2.jpg",
+                pattern: "corners",
+                show_method: "fly",
+                fly_distance: 200
+            });
+            $('#button3').hover_transitions({
+                image_src_two: "../buttons/mixes2.jpg",
+                pattern: "regular",
+                show_method: "fly",
+                fly_distance: 300
+            });
+            $('#button4').hover_transitions({
+                image_src_two: "../buttons/flyers2.jpg",
+                pattern: "skip rows",
+                show_method: "fly",
+                fly_distance: 400
+            });
+            $('#button5').hover_transitions({
+                image_src_two: "../buttons/radio2.jpg",
+                pattern: "skip rows",
+                show_method: "fly",
+                fly_distance: 400
+            });
+            $('#button6').hover_transitions({
+                image_src_two: "../buttons/contact2.jpg",
+                pattern: "skip rows",
+                show_method: "fly",
+                fly_distance: 400
+            });
+
+        });
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+<title>HoverTransitions V1.0 - Help Page</title>
+
+<style type="text/css">
+	.code {
+		border: 1px #d3d3d3 solid;
+		font-family: courier;
+		padding: 10px;
+		font-size: 0.8em;
+		margin: 15px 0px;
+		white-space: pre;
+	}
+	.prop {
+		border-collapse: collapse;
+		padding: 0px;
+		margin-top: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		font-weight: normal;
+	}
+	.prop td {
+		padding: 7px;
+		text-align: left;
+		border: 1px #d3d3d3 solid;
+	}
+	.prop th {
+		padding: 7px;
+		text-align: center;
+		border: 1px #d3d3d3 solid;
+		font-size: 15px;
+		background-color: #e6e6e6;
+		font-weight: bold;
+	}
+</style>
+
+
+</head>
+
+
+<body>
+<h1 style="text-align: center; margin: 10px 0px 10px 0px; border: 1px solid black; width: 800px; margin-left: auto; margin-right: auto; padding-bottom: 3px;">
+	HoverTransitions v1.0 - Help Page
+</h1>
+
+
+<div style="width: 760px; margin-left: auto; margin-right: auto; margin-top: 15px; padding: 20px; border: 1px solid black; font-family: 'Palatino Linotype'; font-size: 1em;">
+
+<h3>How to use</h3>
+<h4>JavaScript</h4>
+<p>You must include the following jQuery code in the head element.
+</p>
+<p class="code">			
+&lt;script type="text/javascript" src="scripts/jquery-1.7.2.min.js" &gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="scripts/jquery-ui-1.8.22.custom.min.js" &gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="scripts/jquery.hover-transitions-1.0.min.js" &gt;&lt;/script&gt;
+</p>
+<p>The jQuery UI custom code includes the slide and scale effects and the effects core. These are required</p>
+
+<h4>HTML</h4>
+
+The plugin is designed to work with all HMTL content. Create the element that you want to animate and add the relevant CSS style to it. The element can have an ID or a class name so that it can be accessed by the jQuery plugin.
+  
+<p class="code">&lt;a id="p1" class ="button" href="http://codecanyon.net"&gt;Press &lt;/a&gt;</p>
+
+<h4>CSS</h4>
+
+The following is an example of the CSS code used to style the element: 
+<p class="code">
+.button {
+	font-weight:normal;
+	font-size: 20px;
+	background-color: #2EA6FF;
+	color: #fff;
+	border-radius: 25px;
+	padding: 30px;
+}</p>
+Those will be the style properties for the initial appearance of the element; some of these properties can also be set via the HoverTransitions plugin properties code. The style of the object after the animation can be defined by creating another class for it or directly via the plugin properties code.
+<h4>Running the plugin</h4>
+The following JavaScript code is used to start the plugin. Multiple instances of the plugin can be executed on each page. 
+<p class="code">
+$('#p1').hover_transitions({
+	innerHTML_two : "Me",
+	background_color_two: "#ff286c",
+	pattern : "spiral"
+});
+</p>
+Please note that the last property must not have a trailing comma in order for it to work in Internet Explorer 7.
+<h4>How the animation works</h4>
+
+The target element is not animated; it remains untouched. Instead an invisible clone of the element is created (with all the required changes) and it is made to appear over the target element.
+
+<h4>Plugin properties</h4>
+
+Below is a list of all the possible properties and an explanation of what they do. To understand some of the properties, please look at the index page for examples.
+
+<br/>
+<br/>
+<b>Properties with default values:</b>
+
+<table class="prop">
+<tr>
+<th>Property</th><th>Default Value</th><th>Description</th>
+</tr>
+
+<tr>
+<td>pattern</td>
+<td>"diagonal"</td>
+<td>Animation pattern. Possible values: "diagonal", "regular",	"spiral", "crossing",
+"corners_alt",	"skip_rows",	"skip_columns",	"checks", "zip",	"random",	"corners" and	"wave".
+</td>
+</tr>
+
+<tr>
+<td>flip_pattern_horizontal</td>
+<td>false</td>
+<td>Flip the patterns horizontally.</td>
+</tr>
+
+<tr>
+<td>flip_pattern_vertical</td>
+<td>false</td>
+<td>Flip the patterns horizontally.</td>
+</tr>
+
+<tr>
+<td>rotate_pattern</td>
+<td>false</td>
+<td>Rotate the pattern by 90 degrees.</td>
+</tr>
+
+<tr>
+<td>pattern_reflection</td>
+<td>1</td>
+<td>Reflect a pattern. Accepts values 1, 2 and 4. Only works with "diagonal", "crossing", "zip" and "regular" patterns.</td>
+</tr>
+
+<tr>
+<td>show_method</td>
+<td>"fade" </td>
+<td>The method used to male each box appear. Possible values: "fly",
+"fade",
+"puff",
+"grow",	
+"sliding_doors_horizontal",
+"sliding_doors_vertical",	
+"alt_slide_vrtical",	
+"alt_slide_horizontal",	
+"slide_up", "slide_down",
+"slide_left", "slide_right",
+and "instant".
+</td>
+</tr>
+
+<tr>
+<td>hide_method </td>
+<td>"fade"</td>
+<td>The method used to hide each box. Accepts the same values as the show method. The show and hide methods do not need to be the same.</td>
+</tr>
+
+<tr>
+<td>fly_show_direction</td>
+<td>"random"</td>
+<td>The flight path of the boxes when the fly method is used. Possible values: "random", "up", "down", "left", "right", "split_vertical", "split_horizontal", "alt_vertical", and "alt_horizontal".</td>
+</tr>
+
+<tr>
+<td>fly_hide_direction</td>
+<td>"random"</td>
+<td>Accepts the same values above but the hide and show values do not need to be the same.</td>
+</tr>
+
+<tr>
+<td>fly_hide_fade_speed</td>
+<td>300</td>
+<td>Duration in milliseconds. The amount of time taken for the boxes to fade away once they have reached their destination.</td>
+</tr>
+
+<tr>
+<td>fly_distance</td>
+<td>100</td>
+<td>The flight distance in pixels away from the target element.</td>
+</tr>
+
+<tr>
+<td>rows</td>
+<td>6</td>
+<td>The number of rows in the pattern.</td>
+</tr>
+
+<tr>
+<td>cols</td>
+<td>6</td>
+<td>The number of columns in the pattern.</td>
+</tr>
+
+<tr>
+<td>pattern_speed</td>
+<td>30</td>
+<td>The time interval (in milliseconds) between the animation of each box in a pattern.</td>
+</tr>
+
+<tr>
+<td>show_speed</td>
+<td>500</td>
+<td>The time in milliseconds taken for the show effect to be completed for each box.</td>
+</tr>
+
+<tr>
+<td>hide_speed</td>
+<td>500</td>
+<td>The time in milliseconds taken for the hide effect to be completed for each box.</td>
+</tr>
+
+<tr>
+<td>event_mode</td>
+<td>"hover"</td>
+<td>Accepts values "hover", "click" and "none". The event method with which the animation will be controlled. Use "none" if you don’t want the element to react to any events (e.g. if another element is controlling the animation of this element).</td>
+</tr>
+
+<tr>
+<td>rewind_on_mouse_out</td>
+<td>true</td>
+<td>Specifies if the animation can be reversed or not.</td>
+</tr>
+
+<tr>
+<td>display<br/> 
+text_decoration<br/>
+text_align<br/>
+</td>
+<td>"inline-block"<br/> "none"<br/> "center"</td>
+<td>These are CSS properties which have been preset with default values because it is anticipated that the plugin will mainly be used to create buttons. They can be overruled.</td>
+</tr>
+
+</table>
+
+
+<br/>
+<br/>
+<b>Properties without default values:</b>
+
+<table class="prop">
+
+<tr>
+<th>Property</th><th>Example Value</th><th>Description</th>
+</tr>
+	
+	
+<tr>
+<td>alt_hover_control</td>
+<td>"#alt_hover"</td>
+<td>The jQuery selector of the alternative element that will control the hover event.</td>
+</tr>
+
+<tr>
+<td>alt_click_control_one</td>
+<td>"#alt_click_one"</td>
+<td>The jQuery selector of the alternative element that will control the show animation when clicked. If the alt_click_control_two property is not set then this will control the hide animation on toggle.</td>
+</tr>
+
+<tr>
+<td>alt_click_control_two</td>
+<td>"#alt_click_two"</td>
+<td>The jQuery selector of the alternative element that will control the hide animation when clicked.</td>
+</tr>
+
+<tr>
+<td>innerHTML_two</td>
+<td>"me"</td>
+<td>The contents of the element after animation.</td>
+</tr>
+
+<tr>
+<td>image_src_two</td>
+<td>"picture.jpg"</td>
+<td>If the element is an image, this will set the src of the image to be animated.</td>
+</tr>
+
+<tr>
+<td>class_one</td>
+<td>"button"</td>
+<td>Element CSS class prior to animation.</td>
+</tr>
+
+<tr>
+<td>class_two</td>
+<td>"button_hover"</td>
+<td>Element CSS class after animation. It will remove class_one after animation, if it has been set.</td>
+</tr>
+
+<tr>
+<td>height_one</td>
+<td>"100px"</td>
+<td>The inner height of the element.</td>
+</tr>
+
+<tr>
+<td>width_one</td>
+<td>"100px"</td>
+<td>The inner width of the element.</td>
+</tr>
+
+<tr>
+<td>font_size_one</td>
+<td>"13px"</td>
+<td>Font size prior to animation.</td>
+</tr>
+
+<tr>
+<td>font_size_two</td>
+<td>"13px"</td>
+<td>Font size after animation.</td>
+</tr>
+
+<tr>
+<td>font_family_one</td>
+<td>"Arial"</td>
+<td>Font family prior to animation.</td>
+</tr>
+
+<tr>
+<td>font_family_two</td>
+<td>"Times"</td>
+<td>Font family after animation.</td>
+</tr>
+
+<tr>
+<td>background_color_one</td>
+<td>"red"</td>
+<td>Background color prior to animation.</td>
+</tr>
+
+<tr>
+<td>background_color_two</td>
+<td>"#369"</td>
+<td>Background color after animation.</td>
+</tr>
+
+<tr>
+<td>color_one</td>
+<td>"black"</td>
+<td>(Text) Color prior to animation.</td>
+</tr>
+
+<tr>
+<td>color_two</td>
+<td>"blue"</td>
+<td>(Text) Color after animation.</td>
+</tr>
+
+<tr>
+<td>border_radius_one</td>
+<td>"20px"</td>
+<td>Border radius prior to animation.</td>
+</tr>
+
+<tr>
+<td>border_radius_two</td>
+<td>"20px"</td>
+<td>Border radius after animation.</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<b>Any specific properties set directly via the plugin will override the properties set using CSS style sheets. Specifically set properties will also override the ones set in classOne and classTwo.</b>
+
+<br/><br/>
+
+Extra support can be given to those who contact me via the CodeCanyon website.<br />
+Created by <a href="http://codecanyon.net/user/ahrahim">A. H. Rahim</a>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,671 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<title>HoverTransitions jQuery</title>
+		<style type="text/css">
+		
+			#main_title{
+				text-align: center;
+				margin: 10px 0px 10px 0px;
+				border: 7px solid #3e62ad;
+				width: 780px;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 5px;
+				border-radius: 20px;				
+			}
+			
+			#main_div{
+				width: 760px;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 15px;
+				padding: 20px;
+				border: 1px solid black;
+				font-family: 'Palatino Linotype';
+				font-size: 1em;
+			}
+			
+			h2{
+				margin-top:35px;
+				
+			}
+			
+			.main_text{
+				text-align:left;
+				width: 670px;
+				margin-left: auto;
+				margin-right: auto;
+				
+			}
+		
+			.code {
+				border: 1px #d3d3d3 solid;
+				font-family: courier;
+				padding: 10px;
+				font-size: 0.8em;
+				width:500px;
+				text-align: left;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.demo{
+				border-collapse:collapse;
+				padding: 0px;
+				margin-top: 30px; 
+				margin-left: auto;
+				margin-right: auto;
+				font-weight: bold;
+			}
+			.demo td {
+				padding: 7px;
+				text-align: center;
+				border: 1px #d3d3d3 solid; 
+			}
+			
+			.button {
+				font-weight:normal;
+				font-size: 20px;
+				background-color: #2EA6FF;
+				color: #fff;
+				border-radius: 25px;
+				padding: 30px;
+			}
+			
+			.example1{
+				padding: 10px;
+				border:5px #2f412e solid;
+				background-color: #8c1c2d;
+				color: #fff;
+			}
+			.example1_hover{			
+				border-radius: 10px;				
+				border: 1px black solid;
+				padding: 14px;
+				background-color: #3e62ad;
+			}
+		</style>
+		<script type="text/javascript" src="scripts/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery-ui-1.8.22.custom.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.hover-transitions-1.0.min.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				// pattern types
+				
+				
+				$('#p1').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "regular"
+					
+				});
+				$('#p2').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "spiral"
+					
+				});
+				$('#p3').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "diagonal"
+					
+				});
+				$('#p4').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "crossing"
+					
+				});
+				$('#p5').hover_transitions({
+				
+					background_color_two: "#ff286c",
+					pattern : "corners_alt"
+					
+				});
+				$('#p6').hover_transitions({
+					
+					background_color_two: "#ff286c",
+					pattern : "skip_rows",
+					cols: 7,
+					rows: 7
+				});
+				$('#p7').hover_transitions({
+					
+					background_color_two: "#ff286c",
+					pattern : "skip_columns",
+					cols: 7,
+					rows: 7
+					
+				});
+				$('#p8').hover_transitions({
+					
+					background_color_two: "#ff286c",
+					pattern : "checks"
+					
+				});				
+				$('#p9').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "zip"
+					
+				});
+				$('#p10').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "random"
+					
+				});
+				$('#p11').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "corners"
+					
+				});
+				$('#p12').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "wave"
+					
+				});
+				// show - hide effects
+				
+				$('#e1').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "spiral",
+					show_method: "fly",
+					hide_method: "fly"
+				});				
+				$('#e2').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "spiral"
+				});
+				$('#e3').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "spiral",
+					show_method: "puff",
+					hide_method: "puff"
+				});
+				$('#e4').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "spiral",
+					show_method: "grow",
+					hide_method: "grow"
+				});
+				$('#e5').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "regular",
+					show_method: "sliding_doors_horizontal",
+					hide_method: "sliding_doors_horizontal",
+					cols: 2,
+					rows: 1,
+					pattern_speed: 0
+				});
+				
+				$('#e6').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "regular",
+					show_method: "sliding_doors_vertical",
+					hide_method: "sliding_doors_vertical",
+					cols: 1,
+					rows: 2,
+					pattern_speed: 0
+				});
+				
+				$('#e7').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "regular",
+					pattern_speed: 0,
+					show_method: "alt_slide_vertical",
+					hide_method: "alt_slide_vertical",
+					cols: 6,
+					rows: 1
+					
+				});
+				$('#e8').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "regular",
+					pattern_speed: 0,
+					show_method: "alt_slide_horizontal",
+					hide_method: "alt_slide_horizontal",
+					cols: 1,
+					rows: 6
+					
+				});
+				$('#e9').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "regular",
+					show_method: "slide_down",
+					hide_method: "slide_down",
+					cols: 6,
+					rows: 1,
+					pattern_speed: 100
+				});
+				$('#e10').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "spiral",
+					show_method: "instant",
+					hide_method: "instant"
+				});
+				
+				
+				// fly effects
+				
+				$('#f1').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "regular",
+					show_method: "fly",
+					hide_method: "fly",
+					fly_show_direction: "left",
+					fly_hide_direction: "left"
+				});
+				
+				$('#f2').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "regular",
+					show_method: "fly",
+					hide_method: "fly",
+					fly_show_direction: "up",
+					fly_hide_direction: "right"
+				});
+				
+				$('#f3').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "random",
+					show_method: "fly",
+					hide_method: "fly"
+					
+				});
+				$('#f4').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "regular",
+					show_method: "fly",
+					hide_method: "fly",
+					fly_show_direction: "split_vertical",
+					fly_hide_direction: "split_vertical"
+					
+				});
+				$('#f5').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "regular",
+					pattern_speed: 0,
+					show_method: "fly",
+					hide_method: "fly",
+					fly_show_direction: "alt_horizontal",
+					fly_hide_direction: "alt_horizontal",
+					cols:1,
+					rows:6
+				});
+				
+				
+				
+				// flip and rotate
+				
+				$('#r1').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "spiral"
+				});				
+				$('#r2').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "spiral",
+					flip_pattern_horizontal: true
+				});
+				$('#r3').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "spiral",
+					flip_pattern_vertical: true
+				});
+				$('#r4').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "spiral",
+					rotate_pattern: true
+				});
+				
+				// reflection
+				
+				$('#m1').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "diagonal"
+					
+				});
+				$('#m2').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "diagonal",
+					pattern_reflection: 2
+				});
+				
+				// speed
+				$('#s1').hover_transitions({
+					background_color_two: "#ff286c",
+					pattern : "checks",
+					pattern_speed: 500,
+					show_method: "fly",
+					hide_method: "fly",
+    				show_speed: 100,
+    				hide_speed: 100
+					
+				});
+				$('#s2').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "wave",
+					pattern_speed: 10,
+					show_method: "instant",
+					hide_method: "instant",
+					rotate_pattern: true
+    				
+					
+				});
+				$('#s3').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "diagonal",
+					pattern_speed: 10,				
+    				show_speed: 3000,
+    				hide_speed: 100
+				});
+				
+				
+				// events
+				
+				$('#event1').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					event_mode: "click"
+				});
+				
+				$('#event2').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					alt_hover_control: "#alt_hover",
+					event_mode: "none"
+				});
+				$('#event3').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					alt_click_control_one: "#alt_click_one",
+        			alt_click_control_two: "#alt_click_two",
+					event_mode: "none"
+				});
+				$('#event4').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					rewind_on_mouse_out: false
+				});
+				
+				$('#sh1').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "diagonal",
+					pattern_reflection: 2,
+					show_method: "fade",
+					hide_method: "fly",
+					fly_hide_direction: "split_horizontal",
+					fly_distance: 50
+				});
+				
+				$('#example1').hover_transitions({
+					pattern: "wave",
+					height: "100px",
+					width: "100px",
+					border_radius_one: "20px",
+					border_radius_two: "10px",					
+					innerHTML_two: "<button type='button'>Don't press me!</button>",
+					class_one: "example1",
+					class_two: "example1_hover"
+				});
+				
+				$('#img1').hover_transitions({
+					image_src_two: "images/morn_s.jpg",
+					pattern: "random",
+					show_method: "fly",
+					fly_distance: 200
+				});
+				
+				$('#use').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "spiral"
+					
+				});
+				
+				
+			});
+
+		</script>
+</head>
+<body>
+	
+<h1 id="main_title">HoverTransitions - jQuery</h1>
+<div id="main_div">
+
+<div class="main_text" >
+HoverTransitions allows you to create numerous transition animation effects for webpage elements. The effects are performed by breaking the element into smaller boxes and animating the appearance of each of them according to different patterns and effects. The effects occur when events are performed. All animations are customisable. 			
+</div>
+			
+<h2>A Variety of Patterns</h2>
+
+<div class="main_text">
+The following are the pattern effects that can be applied. The number of rows and columns can be specified. As you can see all the animations go in reverse when the mouse is moved out of the element.			
+</div>
+
+<table class="demo">
+<tr>
+<td>Regular</td><td>Spiral</td><td>Diagonal</td><td>Crossing</td>
+</tr>
+<tr>
+<td><a id="p1" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="p2" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="p3" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="p4" class ="button" href="http://codecanyon.net">Press </a></td>
+</tr>
+<tr>
+<td>Corners Alt</td><td>Skip Rows</td><td>Skip Columns</td><td>Checks</td>
+</tr>
+<tr>
+<td><a id="p5" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="p6" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="p7" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="p8" class ="button" href="http://codecanyon.net">Press </a></td>
+</tr>
+<tr><td>Zip</td><td>Random</td><td>Corners</td><td>Wave</td></tr>
+<tr>
+<td><a id="p9" class ="button" href="http://codecanyon.net">Press</a></td>
+<td><a id="p10" class ="button" href="http://codecanyon.net">Press</a></td>
+<td><a id="p11" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="p12" class ="button" href="http://codecanyon.net">Press </a></td>
+</tr>
+</table >
+
+<h2>Control the Speed</h2>
+<div class="main_text">
+The speed of the pattern (the delay between each box) can be manipulated and so can the speed at which an individual item appears and disappears.
+</div>
+
+<table class="demo">
+<tr>
+<td><a id="s1" class ="button" href="http://codecanyon.net">Press</a></td>
+<td><a id="s2" class ="button" href="http://codecanyon.net">Press</a></td>
+<td><a id="s3" class ="button" href="http://codecanyon.net">Press</a></td>
+</tr>
+</table>
+
+<h2>Show and Hide Effects</h2>
+<div class="main_text">
+Every pattern can be animated using a number of effects to show and hide the boxes.  
+</div>
+
+<table class="demo">
+<tr>
+<td>Fly</td><td>Fade</td><td>Puff<br/>(Can be processor<br/>intensive)</td><td>Grow</td><td>Sliding Doors<br>Horizontal</td>
+</tr>
+<tr>
+<td><a id="e1" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="e2" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="e3" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="e4" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="e5" class ="button" href="http://codecanyon.net">Press </a></td>
+</tr>
+<tr>
+<td>Sliding Doors<br>Vertical</td><td>Alt Slide<br>Vertical</td><td>Alt Slide<br>Horizontal</td><td>Slide<br>(U, D , L &amp; R)</td><td>Instant</td>
+</tr>
+<tr>
+<td><a id="e6" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="e7" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="e8" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="e9" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="e10" class ="button" href="http://codecanyon.net">Press </a></td>			
+</tr>
+</table>			
+			
+<h2>Fly Effects</h2>
+<div class="main_text">
+The 'Fly' effect can be manipulated in a number of ways. The flight distance, speed and direction can be manipulated.
+</div>
+			
+<table class="demo">
+<tr>
+<td>Single Direction<br>(U, D , L &amp; R)</td><td>Two Directions<br>(U, D , L &amp; R)</td><td>Random</td><td>Split Vertical<br>(&amp; Horizontal)</td><td>Alt Horizontal<br>(&amp; Vertical)</td>
+</tr>
+<tr>
+<td><a id="f1" class ="button" href="http://codecanyon.net">Press</a></td>
+<td><a id="f2" class ="button" href="http://codecanyon.net">Press</a></td>
+<td><a id="f3" class ="button" href="http://codecanyon.net">Press</a></td>
+<td><a id="f4" class ="button" href="http://codecanyon.net">Press</a></td>
+<td><a id="f5" class ="button" href="http://codecanyon.net">Press</a></td>
+</tr>
+</table>
+
+<h2>Mix the Effects</h2>
+<div class="main_text">
+Show and hide effects can be mixed for any element.
+</div>		
+
+<table class="demo">
+<tr>
+<td>Show - Fade<br>Hide - Fly Split Horizontal</td>
+</tr>
+<tr>
+<td><a id="sh1" class ="button" href="http://codecanyon.net">Press</a></td>
+</tr>
+</table>
+		
+<h2>Flip and Rotate the Patterns</h2>
+<div class="main_text">
+Patterns can be flipped horizontally, vertically or both. All patterns can be rotated.
+</div>
+
+<table class="demo">
+<tr>
+<td>Normal</td><td>Flip Horizontal</td><td>Flip Vertical</td><td>Rotate</td>
+</tr>
+<tr>
+<td><a id="r1" class ="button" href="http://codecanyon.net">Press</a></td>
+<td><a id="r2" class ="button" href="http://codecanyon.net">Press</a></td>
+<td><a id="r3" class ="button" href="http://codecanyon.net">Press </a></td>
+<td><a id="r4" class ="button" href="http://codecanyon.net">Press</a></td>
+</tr>
+</table>
+
+<h2>Reflect the Patterns</h2>
+<div class="main_text">
+Some patterns can be reflected in two or four directions.
+</div>
+
+<table class="demo">
+<tr>
+<td>Normal</td><td>Reflection</td>
+</tr>
+<tr>
+<td><a id="m1" class ="button" href="http://codecanyon.net">Press</a></td>
+<td><a id="m2" class ="button" href="http://codecanyon.net">Press</a></td>
+</tr>
+</table>			
+
+<h2>Event Handling</h2>
+<div class="main_text">
+Click and hover events can easily be implemented in different ways to start and stop the animations. A single control element can be used to control the animation of many other elements.
+</div>
+
+<table class="demo">
+<tr>
+<td>Click<br/>(togggle)</td><td>Hover alt</td><td>Click alt</td><td>One Way</td>
+</tr>
+<tr>
+<td><a id="event1" class ="button" href="http://codecanyon.net" >Press</a></td>
+<td><a id="event2" class ="button" href="http://codecanyon.net" style="cursor: default;" onclick="return false;">Press</a>
+<br/><br/>
+<div id="alt_hover" style="cursor:pointer; border: 1px solid red; background-color: Pink;">Hover on me!</div>
+</td>
+<td><a id="event3" class ="button" href="http://codecanyon.net" style="cursor: default;" onclick="return false;">Press </a>
+	<br/><br/>
+	<button id="alt_click_one" type="button">Show</button>
+	<button id="alt_click_two" type="button">Hide</button>
+</td>
+<td><a id="event4" class ="button" href="http://codecanyon.net"  onclick="return false;">Press</a></td>
+</tr>
+</table>
+
+<h2>Use on a Varity of Elements</h2>
+<div class="main_text">
+The plugin can be used with different sorts of elements such as links, buttons and other HTML objects. All element styles can be customised.
+</div>
+
+<br/>
+<div  id="example1" > Press the <button type="button">Button</button> </div>
+<br/><br/>
+<img id="img1" alt="" src="images/night_s.jpg"/>
+
+<h2>Simple to Use</h2>
+<div class="main_text">
+It is very simple to implement any of the effects. Below is the amount of jQuery code needed to implement the following effect (HTML &amp; CSS code not shown):
+</div>
+<br/><a id="use" class ="button" href="http://codecanyon.net">Press </a>
+<p class="code">
+$('#id').hover_transitions({<br />
+&nbsp;&nbsp;&nbsp;innerHTML_two : "Me",<br />
+&nbsp;&nbsp;&nbsp;background_color_two: "#ff286c",<br />
+&nbsp;&nbsp;&nbsp;pattern : "spiral"<br />
+});
+</p>
+<h2>Compatibility</h2>
+<div class="main_text">
+This plugin uses jQuery 1.7 and is compatible with all modern browsers including Internet Explorer 7-9.
+</div>
+
+
+<h2>Future Updates and Support</h2>
+<div class="main_text">
+Suggestions for extra features and updates are welcome. All new updates will be free of charge and free support will be given to purchasers.
+</div>			
+			
+&copy; <a href="http://codecanyon.net/user/ahrahim">A. H. Rahim</a> 2012			
+			
+</div>
+</body>
+</html>

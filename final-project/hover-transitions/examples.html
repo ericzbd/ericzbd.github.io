@@ -1,0 +1,739 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<title>HoverTransitions jQuery</title>
+		<style type="text/css">
+		
+			#main_title{
+				text-align: center;
+				margin: 10px 0px 10px 0px;
+				border: 7px solid #3e62ad;
+				width: 780px;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 5px;
+				border-radius: 20px;				
+			}
+			
+			#main_div{
+				width: 760px;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 15px;
+				padding: 20px;
+				border: 1px solid black;
+				font-family: 'Palatino Linotype';
+				font-size: 1em;
+			}
+			
+			h2{
+				margin-top:35px;
+				
+			}
+			
+			.main_text{
+				text-align:left;
+				width: 670px;
+				margin-left: auto;
+				margin-right: auto;
+				
+			}
+		
+			.code {
+				border: 1px #d3d3d3 solid;
+				font-family: courier;
+				padding: 10px;
+				font-size: 0.8em;
+				width:600px;
+				text-align: left;
+				margin-left: auto;
+				margin-right: auto;
+				white-space: pre;
+				font-weight: normal;
+			}
+			
+			.demo{
+				border-collapse:collapse;
+				padding: 0px;
+				margin-top: 30px; 
+				margin-left: auto;
+				margin-right: auto;
+				font-weight: bold;
+			}
+			.demo td {
+				padding: 7px;
+				text-align: center;
+				border: 1px #d3d3d3 solid; 
+			}
+			.demo th {
+				padding: 7px;
+				text-align: center;
+				border: 1px #d3d3d3 solid;
+				font-size: 20px; 
+				background-color: #e6e6e6;
+			}
+			.button {
+				font-weight:normal;
+				font-size: 20px;
+				background-color: #2EA6FF;
+				color: #fff;
+				border-radius: 25px;
+				padding: 30px;
+			}
+			
+			.example1{
+				padding: 10px;
+				border:5px #2f412e solid;
+				background-color: #8c1c2d;
+				color: #fff;
+			}
+			.example1_hover{			
+				border-radius: 10px;				
+				border: 1px black solid;
+				padding: 14px;
+				background-color: #3e62ad;
+			}
+			.alt_hover{
+				cursor:pointer;
+				border: 1px solid red;
+				background-color: Pink;
+			}
+		</style>
+		<script type="text/javascript" src="scripts/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery-ui-1.8.22.custom.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.hover-transitions-1.0.min.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				// pattern types
+				
+				
+				
+				$('#p4').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "crossing"
+					
+				});
+				
+				// show - hide effects
+				
+				
+				$('#e5').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "regular",
+					show_method: "sliding_doors_horizontal",
+					hide_method: "sliding_doors_horizontal",
+					cols: 2,
+					rows: 1,
+					pattern_speed: 0
+				});
+				$('#e7').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "regular",
+					pattern_speed: 0,
+					show_method: "alt_slide_vertical",
+					hide_method: "alt_slide_vertical",
+					cols: 6,
+					rows: 1
+					
+				});
+				
+				
+				
+				// reflection
+				
+				
+				$('#m2').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "diagonal",
+					pattern_reflection: 2,
+					show_method: "fade",
+					hide_method: "fly",
+					fly_hide_direction: "split_horizontal",
+					fly_distance: 50
+				});
+				
+				// speed
+				
+				$('#s2').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					pattern : "wave",
+					pattern_speed: 10,
+					show_speed: 10,
+					hide_speed:10
+				});
+				
+				
+				
+				// events
+				
+				$('#event1').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					event_mode: "click"
+				});
+				
+				$('#event2').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					alt_hover_control: "#alt_hover",
+					event_mode: "none"
+				});
+				$('#event3').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					alt_click_control_one: "#alt_click_one",
+        			alt_click_control_two: "#alt_click_two",
+					event_mode: "none"
+				});
+				$('#event4').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					rewind_on_mouse_out: false
+				});
+				
+				$('#sh1').hover_transitions({
+					innerHTML_two : "Me",
+					background_color_two: "#ff286c",
+					show_method: "slide_down",
+					hide_method: "fly",
+					fly_hide_direction: "left"
+				});
+				
+				$('#example1').hover_transitions({
+					pattern: "wave",
+					height: "100px",
+					width: "100px",
+					border_radius_one: "20px",
+					border_radius_two: "10px",					
+					innerHTML_two: "<button type='button'>Don't press me!</button>",
+					class_one: "example1",
+					class_two: "example1_hover"
+				});
+				
+				$('#img1').hover_transitions({
+					image_src_two: "images/morn_s.jpg",
+					pattern: "random",
+					show_method: "fly",
+					fly_distance: 200
+				});
+				
+				
+				
+				
+			});
+
+		</script>
+</head>
+<body>
+	
+<h1 id="main_title">HoverTransitions - jQuery</h1>
+<div id="main_div">
+	
+<h2>Examples</h2>
+
+<table class="demo">
+<tr>
+<th>Crossing Pattern</th>
+</tr>
+<tr>
+<td><a id="p4" class ="button" href="http://codecanyon.net">Press </a></td>
+</tr>
+<tr>
+<td>HTML</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+&lt;a id="p4" class ="button" href="http://codecanyon.net"&gt;Press &lt;/a&gt;	
+</p>	
+</td>
+</tr>
+<tr>
+<td>CSS</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+.button {
+	font-weight:normal;
+	font-size: 20px;
+	background-color: #2EA6FF;
+	color: #fff;
+	border-radius: 25px;
+	padding: 30px;
+}	
+</p>	
+</td>
+</tr>
+<tr>
+<td>jQuery</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+$('#p4').hover_transitions({
+	innerHTML_two : "Me",
+	background_color_two: "#ff286c",
+	pattern : "crossing"
+});	
+</p>	
+</td>
+</tr>
+</table>
+
+
+<table class="demo">
+<tr>
+<th>Fast Animation</th>
+</tr>
+<tr>
+<td><a id="s2" class ="button" href="http://codecanyon.net">Press </a></td>
+</tr>
+<tr>
+<td>HTML</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+&lt;a id="s2" class ="button" href="http://codecanyon.net"&gt;Press &lt;/a&gt;	
+</p>	
+</td>
+</tr>
+<tr>
+<td>CSS</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+.button {
+	font-weight:normal;
+	font-size: 20px;
+	background-color: #2EA6FF;
+	color: #fff;
+	border-radius: 25px;
+	padding: 30px;
+}	
+</p>	
+</td>
+</tr>
+<tr>
+<td>jQuery</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+$('#s2').hover_transitions({
+	innerHTML_two : "Me",
+	background_color_two: "#ff286c",
+	pattern : "wave",
+	pattern_speed: 10,
+	show_speed: 10,
+	hide_speed:10
+});	
+</p>	
+</td>
+</tr>
+</table>
+
+
+<table class="demo">
+<tr>
+<th>Sliding Doors Horizontal</th>
+</tr>
+<tr>
+<td><a id="e5" class ="button" href="http://codecanyon.net">Press </a></td>
+</tr>
+<tr>
+<td>HTML</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+&lt;a id="e5" class ="button" href="http://codecanyon.net"&gt;Press &lt;/a&gt;	
+</p>	
+</td>
+</tr>
+<tr>
+<td>CSS</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+.button {
+	font-weight:normal;
+	font-size: 20px;
+	background-color: #2EA6FF;
+	color: #fff;
+	border-radius: 25px;
+	padding: 30px;
+}	
+</p>	
+</td>
+</tr>
+<tr>
+<td>jQuery</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+$('#e5').hover_transitions({
+	innerHTML_two : "Me",
+	background_color_two: "#ff286c",
+	pattern : "regular",
+	show_method: "sliding_doors_horizontal",
+	hide_method: "sliding_doors_horizontal",
+	cols: 2,
+	rows: 1,
+	pattern_speed: 0
+});	
+</p>	
+</td>
+</tr>
+</table>
+
+<table class="demo">
+<tr>
+<th>Alt Slide Vertical</th>
+</tr>
+<tr>
+<td><a id="e7" class ="button" href="http://codecanyon.net">Press </a></td>
+</tr>
+<tr>
+<td>HTML</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+&lt;a id="e7" class ="button" href="http://codecanyon.net"&gt;Press &lt;/a&gt;	
+</p>	
+</td>
+</tr>
+<tr>
+<td>CSS</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+.button {
+	font-weight:normal;
+	font-size: 20px;
+	background-color: #2EA6FF;
+	color: #fff;
+	border-radius: 25px;
+	padding: 30px;
+}	
+</p>	
+</td>
+</tr>
+<tr>
+<td>jQuery</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+$('#e7').hover_transitions({
+	innerHTML_two : "Me",
+	background_color_two: "#ff286c",
+	pattern : "regular",
+	pattern_speed: 0,
+	show_method: "alt_slide_vertical",
+	hide_method: "alt_slide_vertical",
+	cols: 6,
+	rows: 1
+});	
+</p>	
+</td>
+</tr>
+</table>			
+			
+<table class="demo">
+<tr>
+<th>Reflect pattern, fade in, fly out with split.</th>
+</tr>
+<tr>
+<td><a id="m2" class ="button" href="http://codecanyon.net">Press </a></td>
+</tr>
+<tr>
+<td>HTML</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+&lt;a id="m2" class ="button" href="http://codecanyon.net"&gt;Press &lt;/a&gt;	
+</p>	
+</td>
+</tr>
+<tr>
+<td>CSS</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+.button {
+	font-weight:normal;
+	font-size: 20px;
+	background-color: #2EA6FF;
+	color: #fff;
+	border-radius: 25px;
+	padding: 30px;
+}	
+</p>	
+</td>
+</tr>
+<tr>
+<td>jQuery</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+$('#m2').hover_transitions({
+	innerHTML_two : "Me",
+	background_color_two: "#ff286c",
+	pattern : "diagonal",
+	pattern_reflection: 2,
+	show_method: "fade",
+	hide_method: "fly",
+	fly_hide_direction: "split_horizontal",
+	fly_distance: 50
+});	
+</p>	
+</td>
+</tr>
+</table>				
+
+<table class="demo">
+<tr>
+<th>Click - Toggle</th>
+</tr>
+<tr>
+<td><a id="event1" class ="button" href="http://codecanyon.net">Press </a></td>
+</tr>
+<tr>
+<td>HTML</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+&lt;a id="event1" class ="button" href="http://codecanyon.net"&gt;Press &lt;/a&gt;	
+</p>	
+</td>
+</tr>
+<tr>
+<td>CSS</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+.button {
+	font-weight:normal;
+	font-size: 20px;
+	background-color: #2EA6FF;
+	color: #fff;
+	border-radius: 25px;
+	padding: 30px;
+}	
+</p>	
+</td>
+</tr>
+<tr>
+<td>jQuery</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+$('#event1').hover_transitions({
+	innerHTML_two : "Me",
+	background_color_two: "#ff286c",
+	event_mode: "click"
+});	
+</p>	
+</td>
+</tr>
+</table>
+
+<table class="demo">
+<tr>
+<th>Alternate hover control</th>
+</tr>
+<tr>
+<td>
+<a id="event2" class ="button" href="http://codecanyon.net" style="cursor: default;" onclick="return false;">Press</a>
+<br/><br/>
+<div id="alt_hover" style="cursor:pointer; border: 1px solid red; background-color: Pink;">Hover on me!</div>
+
+</td>
+</tr>
+<tr>
+<td>HTML</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+&lt;a id="event2" class ="#" onclick="return false;"&gt;Press&lt;/a&gt;
+&lt;br/&gt;&lt;br/&gt;
+&lt;div id="alt_hover" &gt;Hover on me!&lt;/div&gt;
+</p>	
+</td>
+</tr>
+<tr>
+<td>CSS</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+.button {
+	font-weight:normal;
+	font-size: 20px;
+	background-color: #2EA6FF;
+	color: #fff;
+	border-radius: 25px;
+	padding: 30px;
+	cursor: default;
+}
+.alt_hover{
+	cursor:pointer;
+	border: 1px solid red;
+	background-color: Pink;
+}	
+</p>	
+</td>
+</tr>
+<tr>
+<td>jQuery</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+$('#event2').hover_transitions({
+	innerHTML_two : "Me",
+	background_color_two: "#ff286c",
+	alt_hover_control: "#alt_hover",
+	event_mode: "none"
+});	
+</p>	
+</td>
+</tr>
+</table>
+
+<table class="demo">
+<tr>
+<th>HTML Element</th>
+</tr>
+<tr>
+<td>
+<div  id="example1" > Press the <button type="button">Button</button> </div>
+</td>
+</tr>
+<tr>
+<td>HTML</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+&lt;div  id="example1"&gt; Press the 
+&lt;button type="button"&gt;Button&lt;/button&gt;
+&lt;/div&gt;
+</p>	
+</td>
+</tr>
+<tr>
+<td>CSS</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+.example1{
+	padding: 10px;
+	border:5px #2f412e solid;
+	background-color: #8c1c2d;
+	color: #fff;
+}
+.example1_hover{			
+	border-radius: 10px;				
+	border: 1px black solid;
+	padding: 14px;
+	background-color: #3e62ad;
+}	
+</p>	
+</td>
+</tr>
+<tr>
+<td>jQuery</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+$('#example1').hover_transitions({
+	pattern: "wave",
+	height: "100px",
+	width: "100px",
+	border_radius_one: "20px",
+	border_radius_two: "10px",					
+	innerHTML_two: "&lt;button type='button'&gt;Don't press me!&lt;/button&gt;",
+	class_one: "example1",
+	class_two: "example1_hover"
+});	
+</p>	
+</td>
+</tr>
+</table>			
+
+<table class="demo">
+<tr>
+<td>Images</td>
+</tr>
+<tr>
+<td>
+<img id="img1" alt="" src="images/night_s.jpg"/>
+</td>
+</tr>
+<tr>
+<td>HTML</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+&lt;img id="img1" alt="" src="images/night_s.jpg"/&gt;
+</p>	
+</td>
+</tr>
+<tr>
+<td>CSS</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+None	
+</p>	
+</td>
+</tr>
+<tr>
+<td>jQuery</td>
+</tr>
+<tr>
+<td>
+<p class="code">
+$('#img1').hover_transitions({
+	image_src_two: "images/morn_s.jpg",
+	pattern: "random",
+	show_method: "fly",
+	fly_distance: 200
+});
+</p>	
+</td>
+</tr>
+</table>
+			
+&copy; <a href="http://codecanyon.net/user/ahrahim">A. H. Rahim</a> 2012			
+			
+</div>
+</body>
+</html>
